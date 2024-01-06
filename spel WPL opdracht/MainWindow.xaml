@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:spel_WPL_opdracht"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CookieClicker" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="hout.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <Label Name="LabelScore" Content="0" FontSize="50" Foreground="White" ></Label>
+                <Label x:Name="LabelCookiesTxt" Content="Cookies" FontSize="50" Foreground="White"/>
+            </WrapPanel>
+            <Image x:Name="AfbCookie" Source="koekie.png" Width="200" Height="200" MouseLeftButtonDown="AfbCookie_MouseLeftButtonDown" MouseDown="AfbCookie_MouseDown" MouseLeftButtonUp="AfbCookie_MouseLeftButtonUp" MouseLeave="AfbCookie_MouseLeave"/>
+        </StackPanel>
+        <Button Content="COOKIE CLICKER" FontSize="30" BorderBrush="White" Grid.Column="1" IsEnabled="False" Background="White" Foreground="Black"></Button>
+        <StackPanel Grid.Column="2" VerticalAlignment="Center">
+            <Label Content="STORE" Foreground="white" Grid.Column="2" FontSize="28" HorizontalAlignment="Center" Padding="30"></Label>
+            <Label Name="AantalCookiesPerSec" Foreground="White" Content="Aantal cookies per seconde:"></Label>
+            <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                <Button Name="BtnAutoClicker" Height="70"  ToolTip="Deze upgrade klikt automatisch voor jou, dit is voor de iets luieren mensen onder ons. Dit levert 0.1 koekjes/s op!" IsEnabled="False" Click="BtnAutoClicker_Click_1">
+                    <WrapPanel Width="260">
+                        <Image HorizontalAlignment="Left" Source="Cursor.png" Width="35" Margin="10"></Image>
+                        <StackPanel>
+                            <Label Content="Auto Clicker" Margin="0" FontSize="20"></Label>
+                            <Label Name="LabelAutoClicker" Content="15" Margin="0" Foreground="Gray"></Label>
+                        </StackPanel>
+                        <Label Name="LabelAantalAClickerBuy" Content="0" FontSize="50" Padding="0" Margin="16,-5" Foreground="Gray"></Label>
+                    </WrapPanel>
+                </Button>
+                <Button HorizontalContentAlignment="Left" Name="BtnOma" Height="70" ToolTip="Oma komt je helpen, ze bakt per seconde een koekje. Ze levert dus ook 1 koekje/s op!" IsEnabled="False" Click="BtnOma_Click">
+                    <WrapPanel Width="260">
+                        <Image Source="oma.png" Width="45" Margin="5"></Image>
+                        <StackPanel>
+                            <Label Content="Grandma" Margin="0" FontSize="20"></Label>
+                            <Label Name="LabelOmaPrijs" Content="100" Margin="0" Foreground="Gray"></Label>
+                        </StackPanel>
+                        <Label Name="LabelAantalOmaGekocht" Content="0" FontSize="50" Padding="0" Margin="43,-5" Foreground="Gray"></Label>
+                    </WrapPanel>
+                </Button>
+                <Button HorizontalContentAlignment="Left" Name="BtnFarm" Height="70" ToolTip="Je koopt een hele boerderij en je plant de magische koekjesplant. Dit levert 8 koekjes/s op!" Click="BtnFarm_Click">
+                    <WrapPanel Width="260">
+                        <Image Source="Farm.png" Width="35" Margin="10"></Image>
+                        <StackPanel>
+                            <Label Content="Farm" Margin="0" FontSize="20"></Label>
+                            <Label Name="LabelFarmPrijs" Content="1100" Margin="0" Foreground="Gray"></Label>
+                        </StackPanel>
+                        <Label Name="LabelAantalFarmGekocht" Content="0" FontSize="50" Padding="0" Margin="62,-5" Foreground="Gray"></Label>
+                    </WrapPanel>
+                </Button>
+                <Button HorizontalContentAlignment="Left" Name="BtnMine" Height="70" ToolTip="Je vind in de mijnen de koekjes erts en kiest ervoor om ze te mijnen en ontginnen. Dit levert 47 koekjes/s op!" Click="BtnMine_Click">
+                    <WrapPanel Width="260">
+                        <Image Source="mijn.webp" Width="50"></Image>
+                        <StackPanel>
+                            <Label Content="Mine" Margin="0" FontSize="20"></Label>
+                            <Label Name="LabelMinePrijs" Content="12000" Margin="0" Foreground="Gray"></Label>
+                        </StackPanel>
+                        <Label Name="LabelAantalMijnGekocht" Content="0" FontSize="50" Padding="0" Margin="63,-5" Foreground="Gray"></Label>
+                    </WrapPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

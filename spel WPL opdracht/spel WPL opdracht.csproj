@@ -86,6 +86,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Cookie_Clicker.webp" />
+    <None Include="mijn.webp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +95,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="koek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="koek1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="koekie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Farm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="oma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="omaa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
