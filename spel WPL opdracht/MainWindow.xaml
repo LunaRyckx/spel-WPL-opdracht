@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:spel_WPL_opdracht"
         mc:Ignorable="d"
         Title="CookieClicker" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,0,0,-6">
         <Grid.Background>
             <ImageBrush ImageSource="hout.jpg"/>
         </Grid.Background>
@@ -16,26 +16,34 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
+
+            <Label Content="PXL-Bakery" FontSize="49" Foreground="AntiqueWhite" FontStyle="Italic" FontWeight="DemiBold" Padding="5" HorizontalAlignment="Center"></Label>
+
             <WrapPanel HorizontalAlignment="Center">
                 <Label Name="LabelScore" Content="0" FontSize="40" Foreground="White" Padding="15"></Label>
                 <Label x:Name="LabelCookiesTxt" Content="Cookies" Padding="15" FontSize="40" Foreground="White"/>
             </WrapPanel>
             <Image x:Name="AfbCookie" Source="koekie.png" Width="200" Height="300" MouseLeftButtonDown="AfbCookie_MouseLeftButtonDown" MouseDown="AfbCookie_MouseDown" MouseLeftButtonUp="AfbCookie_MouseLeftButtonUp" MouseLeave="AfbCookie_MouseLeave"/>
         </StackPanel>
-        <Image Source="wp7667541.png" Stretch="Fill" Width="270" Height="926" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1" Margin="263,0,0,0" Grid.ColumnSpan="2"  Grid.RowSpan="2" Visibility="Collapsed"/>
-      
+
+
+        <Image x:Name="achtergrond" Source="wp7667541.png" Stretch="Fill" Width="270" Height="926" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1" Margin="263,0,0,0" Grid.ColumnSpan="2"  Grid.RowSpan="2" Visibility="Collapsed"/>
+        <Image x:Name="town" Source="town.jpg" Grid.ColumnSpan="2" Margin="264,-45,1,45" Panel.ZIndex="2" Visibility="Collapsed" ></Image>
+        <Image x:Name="bos" Source="fotobos.jpg" Grid.ColumnSpan="2" Margin="0,170,266,56" Panel.ZIndex="2" Grid.Column="1" Visibility="Collapsed"></Image>
+        <Image x:Name="bakker" Source="bakker.jpg" Grid.ColumnSpan="2" Margin="266,-58,0,225" Panel.ZIndex="3" Visibility="Collapsed"/>
+
 
 
         <Button Content="COOKIE CLICKER" FontSize="30" BorderBrush="White" Grid.Column="1" IsEnabled="False" Background="White" Foreground="Black" Grid.RowSpan="2"></Button>
-        <StackPanel Grid.Column="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="266,15,0,0" Grid.RowSpan="2">
+        <StackPanel Grid.Column="2" VerticalAlignment="Center">
             <Label Content="STORE" Foreground="white" Grid.Column="2" FontSize="28" HorizontalAlignment="Center" Padding="30"></Label>
             <Label Name="AantalCookiesPerSec" Foreground="White" Content="Aantal cookies per seconde:"></Label>
 
-            <ScrollViewer >
+            
                 <StackPanel Grid.Column="2" VerticalAlignment="Center">
-                    
+
                     <Button Name="BtnAutoClicker" Height="70"  IsEnabled="False" Click="BtnAutoClicker_Click_1">
-                        <WrapPanel Width="240" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <WrapPanel Width="260" >
                             <Image HorizontalAlignment="Left" Source="Cursor.png" Width="35" Margin="10"></Image>
                             <StackPanel>
                                 <Label Content="Auto Clicker" Margin="1" FontSize="20"></Label>
@@ -44,8 +52,9 @@
                             <Label Name="LabelAantalAClickerBuy" Content="0" FontSize="50" Padding="0" Margin="16,-5" Foreground="Gray"></Label>
                         </WrapPanel>
                     </Button>
-                    <Button HorizontalContentAlignment="Left" Name="BtnOma" Height="70"  IsEnabled="False" Click="BtnOma_Click">
-                        <WrapPanel Width="240" Margin="4" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    <Button Name="BtnOma" Height="70"  IsEnabled="False" Click="BtnOma_Click">
+                        <WrapPanel Width="260" >
                             <Image Source="oma.png" Width="44" Margin="5"></Image>
                             <StackPanel>
                                 <Label Content="Grandma" Margin="0" FontSize="20"></Label>
@@ -54,9 +63,9 @@
                             <Label Name="LabelAantalOmaGekocht" Content="0" FontSize="50" Padding="0" Margin="33,-5" Foreground="Gray"></Label>
                         </WrapPanel>
                     </Button>
-                    
-                    <Button HorizontalContentAlignment="Left" Name="BtnFarm" Height="70" Click="BtnFarm_Click"  IsEnabled="False" >
-                        <WrapPanel Width="260" Margin="4" >
+
+                    <Button  Name="BtnFarm" Height="70" Click="BtnFarm_Click"  IsEnabled="False" >
+                        <WrapPanel Width="260">
                             <Image Source="Farm.png" Width="35" Margin="10"></Image>
                             <StackPanel>
                                 <Label Content="Farm" Margin="0" FontSize="20"></Label>
@@ -65,9 +74,9 @@
                             <Label Name="LabelAantalFarmGekocht" Content="0" FontSize="50" Padding="0" Margin="62,-6" Foreground="Gray"></Label>
                         </WrapPanel>
                     </Button>
-                    
-                    <Button HorizontalContentAlignment="Left" Name="BtnMine" Height="70"  Click="BtnMine_Click"  IsEnabled="False" >
-                        <WrapPanel Width="260" Margin="4">
+
+                    <Button  Name="BtnMine" Height="70"  Click="BtnMine_Click"  IsEnabled="False" >
+                        <WrapPanel Width="260" >
                             <Image Source="mine.jpg" Width="50"></Image>
                             <StackPanel>
                                 <Label Content="Mine" Margin="0" FontSize="20" ></Label>
@@ -77,8 +86,8 @@
                         </WrapPanel>
                     </Button>
 
-                    <Button HorizontalContentAlignment="Left" Name="BtnFactory" Height="70" Click="BtnFactory_Click"  IsEnabled="False" Visibility="Collapsed">
-                        <WrapPanel Width="260" Margin="4">
+                    <Button  Name="BtnFactory" Height="70" Click="BtnFactory_Click"  IsEnabled="False" Visibility="Collapsed">
+                        <WrapPanel Width="260" >
                             <Image Source="Factoryyy.png" Width="40" Margin="1"></Image>
                             <StackPanel>
                                 <Label Content="Factory" Margin="0" FontSize="20"></Label>
@@ -90,7 +99,7 @@
 
 
 
-                    <Button HorizontalContentAlignment="Left" Name="BtnBank" Height="70" Click="BtnBank_Click"  IsEnabled="False" Visibility="Collapsed" >
+                    <Button Name="BtnBank" Height="70" Click="BtnBank_Click"  IsEnabled="False" Visibility="Collapsed" >
                         <WrapPanel Width="260" Margin="4">
                             <Image Source="Bank.png" Width="40" Margin="0"></Image>
                             <StackPanel>
@@ -101,7 +110,7 @@
                         </WrapPanel>
                     </Button>
 
-                    <Button HorizontalContentAlignment="Left" Name="BtnTemple" Height="70" Click="BtnTemple_Click"  IsEnabled="False" Visibility="Collapsed" >
+                    <Button  Name="BtnTemple" Height="70" Click="BtnTemple_Click"  IsEnabled="False" Visibility="Collapsed" >
                         <WrapPanel Width="260" Margin="4">
                             <Image Source="tempel.png" Width="40" Margin="0"></Image>
                             <StackPanel>
@@ -112,7 +121,7 @@
                         </WrapPanel>
                     </Button>
                 </StackPanel>
-            </ScrollViewer>
+          
         </StackPanel>
     </Grid>
 </Window>

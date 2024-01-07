@@ -88,7 +88,7 @@ namespace spel_WPL_opdracht
             if (cookie >= Oma)
             {
                 BtnOma.IsEnabled = true;
-                
+
             }
             if (cookie >= Farm)
             {
@@ -162,6 +162,9 @@ namespace spel_WPL_opdracht
 
                 OmaClicker++;
                 LabelAantalOmaGekocht.Content = OmaClicker;
+
+                achtergrond.Visibility = Visibility.Visible;
+                bakker.Visibility = Visibility.Visible;
 
             }
         }
