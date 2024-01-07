@@ -25,6 +25,8 @@ namespace spel_WPL_opdracht
         int cookie =0;
         int AutoClicker = 0;
         int OmaClicker = 0;
+        int MineClicker = 0;
+        int FarmClicker = 0;
         int _ticks = 0;
 
         const int AutoClickerPrijs = 15;
@@ -43,10 +45,9 @@ namespace spel_WPL_opdracht
             InitializeComponent();
 
             DispatcherTimer wekker = new DispatcherTimer();
-            // Timer laten aflopen om de seconde.
             wekker.Tick += new EventHandler(DispatcherTimer_Tick);
-            wekker.Interval = new TimeSpan(0, 0, 1); //uren, minuten, seconden
-                                                     // Timer laten starten
+            wekker.Interval = new TimeSpan(0, 0, 1);
+                                                     
             wekker.Start();
 
 
@@ -82,6 +83,14 @@ namespace spel_WPL_opdracht
             {
                 BtnOma.IsEnabled = true;
             }
+            if (cookie >= Farm)
+            {
+                BtnFarm.IsEnabled = true;
+            }
+            if (cookie >= Mine)
+            {
+                BtnMine.IsEnabled = true;
+            }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -93,29 +102,23 @@ namespace spel_WPL_opdracht
 
         private void AfbCookie_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            AfbCookie.Width = 180;
+            AfbCookie.Height = 280;
         }
         private void AfbCookie_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cookie ++;
             LabelScore.Content = cookie;
 
+            AfbCookie.Width = 200;
+            AfbCookie.Height = 300;
+
         }
         private void AfbCookie_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
         }
-        private void AfbCookie_MouseLeave(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-
-
-
-
-
-
+      
 
         private void BtnAutoClicker_Click_1(object sender, MouseButtonEventArgs e)
         {
@@ -127,9 +130,6 @@ namespace spel_WPL_opdracht
         {
 
         }
-
-        
-       
 
    
         private void BtnOma_Click(object sender, RoutedEventArgs e)
@@ -143,7 +143,7 @@ namespace spel_WPL_opdracht
                 LabelScore.Content = cookie;
                 LabelOmaPrijs.Content = "Oma gekocht";
 
-                // BtnAutoClicker.Visibility = Visibility.Visible;
+                
 
                 OmaClicker++;
                 LabelAantalOmaGekocht.Content = OmaClicker;
@@ -152,11 +152,37 @@ namespace spel_WPL_opdracht
         }
         private void BtnFarm_Click(object sender, RoutedEventArgs e)
         {
+            if
+               (cookie >= Farm)
 
+            {
+
+                cookie = cookie - Farm;
+                LabelScore.Content = cookie;
+                LabelFarmPrijs.Content = "Farm gekocht";
+
+                
+
+                FarmClicker++;
+                LabelAantalFarmGekocht.Content = OmaClicker;
+
+            }
         }
         private void BtnMine_Click(object sender, RoutedEventArgs e)
         {
+            if
+                (cookie >= Mine)
 
+            {
+    
+                 cookie = cookie - Mine;
+                 LabelScore.Content = cookie;
+                 LabelMinePrijs.Content = "Mine gekocht";
+    
+                 MineClicker++;
+                 LabelAantalMijnGekocht.Content = OmaClicker;
+    
+                }
         }
 
         private void BtnAutoClicker_Click_1(object sender, RoutedEventArgs e)
@@ -170,12 +196,17 @@ namespace spel_WPL_opdracht
                 LabelScore.Content = cookie;
                 LabelAutoClicker.Content = "AutoClicker gekocht";
 
-                // BtnAutoClicker.Visibility = Visibility.Visible;
+               
 
                 AutoClicker++;
                 LabelAantalAClickerBuy.Content = AutoClicker;
 
             }
+        }
+
+        private void BtnFactory_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
