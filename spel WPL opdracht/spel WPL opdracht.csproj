@@ -87,6 +87,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Cookie_Clicker.webp" />
+    <None Include="Factory-Step-10.webp" />
     <None Include="mijn.webp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,6 +120,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="omaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wp7667541.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bakker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="veld.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="foto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="town.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fotobos.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
