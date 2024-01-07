@@ -36,7 +36,7 @@
             <Label Content="STORE" Foreground="white" Grid.Column="2" FontSize="28" HorizontalAlignment="Center" Padding="30"></Label>
             <Label Name="AantalCookiesPerSec" Foreground="White" Content="Aantal cookies per seconde:"></Label>
 
-            <ScrollViewer>
+            <ScrollViewer VerticalScrollBarVisibility="Visible" >
                 <StackPanel Grid.Column="2" VerticalAlignment="Center">
                     
                     <Button Name="BtnAutoClicker" Height="70"  IsEnabled="False" Click="BtnAutoClicker_Click_1">
@@ -76,7 +76,7 @@
                             <Image Source="mijn.webp" Width="50"></Image>
                             <StackPanel>
                                 <Label Content="Mine" Margin="0" FontSize="20" ></Label>
-                                <Label Name="LabelMinePrijs" Content="12000" Margin="0" Foreground="Gray"></Label>
+                                <Label Name="LabelMinePrijs" Content="12.000" Margin="0" Foreground="Gray"></Label>
                             </StackPanel>
                             <Label Name="LabelAantalMijnGekocht" Content="0" FontSize="50" Padding="0" Margin="64,-5" Foreground="Gray"></Label>
                         </WrapPanel>
@@ -87,9 +87,33 @@
                             <Image Source="Factory-Step-10.webp" Width="40" Margin="1"></Image>
                             <StackPanel>
                                 <Label Content="Factory" Margin="0" FontSize="20"></Label>
-                                <Label Name="LabelFactoryPrijs" Content="4444" Margin="0" Foreground="Gray"></Label>
+                                <Label Name="LabelFactoryPrijs" Content="130.000" Margin="0" Foreground="Gray"></Label>
                             </StackPanel>
                             <Label Name="LabelAantalFactoryGekocht" Content="0" FontSize="50" Padding="0" Margin="62,-6" Foreground="Gray"></Label>
+                        </WrapPanel>
+                    </Button>
+
+
+
+                    <Button HorizontalContentAlignment="Left" Name="BtnBank" Height="70" Click="BtnBank_Click"  IsEnabled="False" >
+                        <WrapPanel Width="260" Margin="4">
+                            <Image Source="Bank.png" Width="40" Margin="1"></Image>
+                            <StackPanel>
+                                <Label Content="Bank" Margin="0" FontSize="20"></Label>
+                                <Label Name="LabelBankPrijs" Content="1.400.000" Margin="0" Foreground="Gray"></Label>
+                            </StackPanel>
+                            <Label Name="LabelAantalBankGekocht" Content="0" FontSize="50" Padding="0" Margin="62,-6" Foreground="Gray"></Label>
+                        </WrapPanel>
+                    </Button>
+
+                    <Button HorizontalContentAlignment="Left" Name="BtnTemple" Height="70" Click="BtnTemple_Click"  IsEnabled="False" >
+                        <WrapPanel Width="260" Margin="4">
+                            <Image Source="tempel.png" Width="40" Margin="1"></Image>
+                            <StackPanel>
+                                <Label Content="Temple" Margin="0" FontSize="20"></Label>
+                                <Label Name="LabelTemplePrijs" Content="20.000.000" Margin="0" Foreground="Gray"></Label>
+                            </StackPanel>
+                            <Label Name="LabelAantalTempleGekocht" Content="0" FontSize="50" Padding="0" Margin="62,-6" Foreground="Gray"></Label>
                         </WrapPanel>
                     </Button>
                 </StackPanel>
