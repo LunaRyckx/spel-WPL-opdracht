@@ -165,6 +165,7 @@ namespace spel_WPL_opdracht
 
                 achtergrond.Visibility = Visibility.Visible;
                 bakker.Visibility = Visibility.Visible;
+                oma.Visibility = Visibility.Visible;
 
             }
         }
@@ -182,7 +183,10 @@ namespace spel_WPL_opdracht
                 
 
                 FarmClicker++;
-                LabelAantalFarmGekocht.Content = OmaClicker;
+                LabelAantalFarmGekocht.Content = FarmClicker;
+
+                town.Visibility = Visibility.Visible;
+                farm.Visibility = Visibility.Visible;
 
             }
         }
@@ -198,7 +202,10 @@ namespace spel_WPL_opdracht
                  LabelMinePrijs.Content = "Mine gekocht";
     
                  MineClicker++;
-                 LabelAantalMijnGekocht.Content = OmaClicker;
+                 LabelAantalMijnGekocht.Content = MineClicker;
+
+                bos.Visibility = Visibility.Visible;
+                mijn.Visibility = Visibility.Visible;
     
                 }
         }
@@ -235,8 +242,8 @@ namespace spel_WPL_opdracht
     
                 
     
-                 AutoClicker++;
-                 LabelAantalFactoryGekocht.Content = AutoClicker;
+                 FactoryClicker++;
+                 LabelAantalFactoryGekocht.Content = FactoryClicker;
     
                 }
         }
@@ -249,7 +256,10 @@ namespace spel_WPL_opdracht
 
                 cookie = cookie - Bank;
                 LabelScore.Content = cookie;
-                LabelBankPrijs.Content = "Bank gekocht";    
+                LabelBankPrijs.Content = "Bank gekocht";
+
+                BankClicker++;
+                LabelAantalBankGekocht.Content = BankClicker;
             }
         }
 
@@ -262,6 +272,9 @@ namespace spel_WPL_opdracht
                 cookie = cookie - Temple;
                 LabelScore.Content = cookie;
                 LabelTemplePrijs.Content = "Temple gekocht";
+
+                TempleClicker++;
+                LabelAantalTempleGekocht.Content = TempleClicker;
             }
         }
     }
