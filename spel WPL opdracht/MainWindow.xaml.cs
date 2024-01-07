@@ -27,12 +27,18 @@ namespace spel_WPL_opdracht
         int OmaClicker = 0;
         int MineClicker = 0;
         int FarmClicker = 0;
+        int FactoryClicker = 0;
+        int BankClicker = 0;
+        int TempleClicker = 0;
         int _ticks = 0;
 
         const int AutoClickerPrijs = 15;
         const int Oma = 100;
         const int Farm = 1100;
         const int Mine = 12000;
+        const int Factory = 130000;
+        const int Bank = 1400000;
+        const int Temple = 20000000;
 
         float cookieAuto;
         int omaAuto;
@@ -82,6 +88,7 @@ namespace spel_WPL_opdracht
             if (cookie >= Oma)
             {
                 BtnOma.IsEnabled = true;
+                
             }
             if (cookie >= Farm)
             {
@@ -90,6 +97,18 @@ namespace spel_WPL_opdracht
             if (cookie >= Mine)
             {
                 BtnMine.IsEnabled = true;
+            }
+            if (cookie >= Factory)
+            {
+                BtnFactory.IsEnabled = true;
+            }
+            if (cookie >= Bank)
+            {
+                BtnBank.IsEnabled = true;
+            }
+            if (cookie >= Temple)
+            {
+                BtnTemple.IsEnabled = true;
             }
         }
 
@@ -118,20 +137,16 @@ namespace spel_WPL_opdracht
         {
 
         }
-      
-
         private void BtnAutoClicker_Click_1(object sender, MouseButtonEventArgs e)
         {
            
                 
         }
-
         private void AfbCookie_MouseLeave(object sender, MouseEventArgs e)
         {
 
         }
 
-   
         private void BtnOma_Click(object sender, RoutedEventArgs e)
         {
             if
@@ -206,17 +221,45 @@ namespace spel_WPL_opdracht
 
         private void BtnFactory_Click(object sender, RoutedEventArgs e)
         {
+            if
+                (cookie >= Factory)
 
+            {
+    
+                 cookie = cookie - Factory;
+                 LabelScore.Content = cookie;
+                 LabelFactoryPrijs.Content = "Factory gekocht";
+    
+                
+    
+                 AutoClicker++;
+                 LabelAantalFactoryGekocht.Content = AutoClicker;
+    
+                }
         }
 
         private void BtnBank_Click(object sender, RoutedEventArgs e)
         {
+            if (cookie >= Bank)
 
+            {
+
+                cookie = cookie - Bank;
+                LabelScore.Content = cookie;
+                LabelBankPrijs.Content = "Bank gekocht";    
+            }
         }
 
         private void BtnTemple_Click(object sender, RoutedEventArgs e)
         {
+            if (cookie >= Temple)
 
+            {
+
+                cookie = cookie - Temple;
+                LabelScore.Content = cookie;
+                LabelTemplePrijs.Content = "Temple gekocht";
+            }
         }
     }
 }
