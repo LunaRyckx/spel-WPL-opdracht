@@ -7,11 +7,6 @@
         mc:Ignorable="d"
         Title="CookieClicker" Height="450" Width="800">
     <Grid>
-        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="139*"/>
-            <RowDefinition Height="78*"/>
-        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="hout.jpg"/>
         </Grid.Background>
@@ -20,7 +15,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.ColumnSpan="2" Margin="0,0,266,0" Grid.RowSpan="2">
+        <StackPanel>
             <WrapPanel HorizontalAlignment="Center">
                 <Label Name="LabelScore" Content="0" FontSize="40" Foreground="White" Padding="15"></Label>
                 <Label x:Name="LabelCookiesTxt" Content="Cookies" Padding="15" FontSize="40" Foreground="White"/>
@@ -36,7 +31,7 @@
             <Label Content="STORE" Foreground="white" Grid.Column="2" FontSize="28" HorizontalAlignment="Center" Padding="30"></Label>
             <Label Name="AantalCookiesPerSec" Foreground="White" Content="Aantal cookies per seconde:"></Label>
 
-            <ScrollViewer VerticalScrollBarVisibility="Visible" >
+            <ScrollViewer >
                 <StackPanel Grid.Column="2" VerticalAlignment="Center">
                     
                     <Button Name="BtnAutoClicker" Height="70"  IsEnabled="False" Click="BtnAutoClicker_Click_1">
@@ -50,7 +45,7 @@
                         </WrapPanel>
                     </Button>
                     <Button HorizontalContentAlignment="Left" Name="BtnOma" Height="70"  IsEnabled="False" Click="BtnOma_Click">
-                        <WrapPanel Width="240" Margin="4" HorizontalAlignment="Right">
+                        <WrapPanel Width="240" Margin="4" VerticalAlignment="Bottom" HorizontalAlignment="Right">
                             <Image Source="oma.png" Width="44" Margin="5"></Image>
                             <StackPanel>
                                 <Label Content="Grandma" Margin="0" FontSize="20"></Label>
@@ -61,7 +56,7 @@
                     </Button>
                     
                     <Button HorizontalContentAlignment="Left" Name="BtnFarm" Height="70" Click="BtnFarm_Click"  IsEnabled="False" >
-                        <WrapPanel Width="260" Margin="4">
+                        <WrapPanel Width="260" Margin="4" >
                             <Image Source="Farm.png" Width="35" Margin="10"></Image>
                             <StackPanel>
                                 <Label Content="Farm" Margin="0" FontSize="20"></Label>
@@ -73,7 +68,7 @@
                     
                     <Button HorizontalContentAlignment="Left" Name="BtnMine" Height="70"  Click="BtnMine_Click"  IsEnabled="False" >
                         <WrapPanel Width="260" Margin="4">
-                            <Image Source="mijn.webp" Width="50"></Image>
+                            <Image Source="mine.jpg" Width="50"></Image>
                             <StackPanel>
                                 <Label Content="Mine" Margin="0" FontSize="20" ></Label>
                                 <Label Name="LabelMinePrijs" Content="12.000" Margin="0" Foreground="Gray"></Label>
@@ -82,9 +77,9 @@
                         </WrapPanel>
                     </Button>
 
-                    <Button HorizontalContentAlignment="Left" Name="BtnFactory" Height="70" Click="BtnFactory_Click"  IsEnabled="False" >
+                    <Button HorizontalContentAlignment="Left" Name="BtnFactory" Height="70" Click="BtnFactory_Click"  IsEnabled="False" Visibility="Collapsed">
                         <WrapPanel Width="260" Margin="4">
-                            <Image Source="Factory-Step-10.webp" Width="40" Margin="1"></Image>
+                            <Image Source="Factoryyy.png" Width="40" Margin="1"></Image>
                             <StackPanel>
                                 <Label Content="Factory" Margin="0" FontSize="20"></Label>
                                 <Label Name="LabelFactoryPrijs" Content="130.000" Margin="0" Foreground="Gray"></Label>
@@ -95,25 +90,25 @@
 
 
 
-                    <Button HorizontalContentAlignment="Left" Name="BtnBank" Height="70" Click="BtnBank_Click"  IsEnabled="False" >
+                    <Button HorizontalContentAlignment="Left" Name="BtnBank" Height="70" Click="BtnBank_Click"  IsEnabled="False" Visibility="Collapsed" >
                         <WrapPanel Width="260" Margin="4">
-                            <Image Source="Bank.png" Width="40" Margin="1"></Image>
+                            <Image Source="Bank.png" Width="40" Margin="0"></Image>
                             <StackPanel>
                                 <Label Content="Bank" Margin="0" FontSize="20"></Label>
                                 <Label Name="LabelBankPrijs" Content="1.400.000" Margin="0" Foreground="Gray"></Label>
                             </StackPanel>
-                            <Label Name="LabelAantalBankGekocht" Content="0" FontSize="50" Padding="0" Margin="62,-6" Foreground="Gray"></Label>
+                            <Label Name="LabelAantalBankGekocht" Content="0" FontSize="50" Padding="0" Margin="60,-5" Foreground="Gray"></Label>
                         </WrapPanel>
                     </Button>
 
-                    <Button HorizontalContentAlignment="Left" Name="BtnTemple" Height="70" Click="BtnTemple_Click"  IsEnabled="False" >
+                    <Button HorizontalContentAlignment="Left" Name="BtnTemple" Height="70" Click="BtnTemple_Click"  IsEnabled="False" Visibility="Collapsed" >
                         <WrapPanel Width="260" Margin="4">
-                            <Image Source="tempel.png" Width="40" Margin="1"></Image>
+                            <Image Source="tempel.png" Width="40" Margin="0"></Image>
                             <StackPanel>
                                 <Label Content="Temple" Margin="0" FontSize="20"></Label>
                                 <Label Name="LabelTemplePrijs" Content="20.000.000" Margin="0" Foreground="Gray"></Label>
                             </StackPanel>
-                            <Label Name="LabelAantalTempleGekocht" Content="0" FontSize="50" Padding="0" Margin="62,-6" Foreground="Gray"></Label>
+                            <Label Name="LabelAantalTempleGekocht" Content="0" FontSize="50" Padding="0" Margin="60,-5" Foreground="Gray"></Label>
                         </WrapPanel>
                     </Button>
                 </StackPanel>
