@@ -208,5 +208,15 @@ namespace spel_WPL_opdracht
         {
 
         }
+
+        private void BtnBank_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnTemple_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

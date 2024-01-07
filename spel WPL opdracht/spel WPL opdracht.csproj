@@ -139,5 +139,11 @@
   <ItemGroup>
     <Resource Include="fotobos.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tempel.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
